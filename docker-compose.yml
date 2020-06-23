@@ -1,0 +1,12 @@
+version: '3.8'
+
+services:
+  web:
+    image: php:8.0-rc-alpine
+    working_dir: /source
+    volumes:
+      - .:/source:delegated
+      - ./php.ini:/usr/local/etc/php/php.ini:delegated
+    ports:
+      - 8000:8000
+    command: php artisan serve --host=0.0.0.0

@@ -16,3 +16,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/constructor-promotion', 'ConstructorPromotion');
+
+Route::get('/before/constructor-promotion', 'Before\\ConstructorPromotion');
