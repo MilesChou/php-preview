@@ -11,16 +11,6 @@ use PHPUnit\Framework\TestCase;
  */
 class StrFunctionTest extends TestCase
 {
-    /**
-     * @before
-     */
-    public function check(): void
-    {
-        if (PHP_VERSION_ID < 80000) {
-            self::markTestSkipped('PHP version is not >= 8');
-        }
-    }
-
     public function test_str_starts_with(): void
     {
         $this->assertSame(

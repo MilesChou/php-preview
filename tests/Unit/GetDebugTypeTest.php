@@ -11,16 +11,6 @@ use stdClass;
  */
 class GetDebugTypeTest extends TestCase
 {
-    /**
-     * @before
-     */
-    public function check(): void
-    {
-        if (PHP_VERSION_ID < 80000) {
-            self::markTestSkipped('PHP version is not >= 8');
-        }
-    }
-
     public function test_get_debug_type(): void
     {
         self::assertSame('stdClass', get_debug_type(new stdClass()));
