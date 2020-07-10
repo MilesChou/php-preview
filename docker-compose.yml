@@ -1,7 +1,7 @@
 version: '3.8'
 
 services:
-  web:
+  web: &basic
     image: php:8.0-rc-alpine
     working_dir: /source
     volumes:
@@ -10,3 +10,7 @@ services:
     ports:
       - 8000:8000
     command: php artisan serve --host=0.0.0.0
+
+  unit:
+    <<: *basic
+    command: php vendor/bin/phpunit
