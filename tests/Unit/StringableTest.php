@@ -4,7 +4,7 @@ namespace Tests\Unit;
 
 use Illuminate\Support\Stringable as LaravelStringable;
 use Stringable;
-use Tests\TestCase;
+use PHPUnit\Framework\TestCase;
 
 class StringableTest extends TestCase
 {
